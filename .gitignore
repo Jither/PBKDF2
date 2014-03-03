@@ -1,0 +1,16 @@
+#VS
+[Oo]bj
+[Bb]in
+*.user
+*.suo
+
+#Resharper
+_ReSharper.*
+*.resharper
+
+#Nuget
+packages/
+
+#OS junk
+*.DS_Store
+[Tt]humbs.db 

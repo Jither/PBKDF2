@@ -136,8 +136,8 @@ namespace AwpTest
         private static void ShowHeader()
         {
             Console.WriteLine();
-            Console.WriteLine("Antiweakpasswords command line tool");
-            Console.WriteLine("-----------------------------------");
+            Console.WriteLine("Anti-weakpasswords command line tool");
+            Console.WriteLine("------------------------------------");
         }
 
         private static void ShowError(string message, params object[] args)
@@ -157,8 +157,9 @@ namespace AwpTest
 
         private static void ShowUsage()
         {
-            Console.WriteLine("Usage: {0}", Path.GetFileName(Assembly.GetExecutingAssembly().Location));
-
+            Console.WriteLine("Usage: {0} OPTIONS", Path.GetFileName(Assembly.GetExecutingAssembly().Location));
+            Console.WriteLine();
+            Console.WriteLine("Options:");
             options.WriteOptionDescriptions(Console.Out);
         }
     }

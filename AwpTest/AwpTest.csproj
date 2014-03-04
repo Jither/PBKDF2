@@ -49,9 +49,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Jither.PBKDF2\Jither.PBKDF2.csproj">
       <Project>{056DA0A7-9EC2-49CB-AC96-D12C86D1556D}</Project>
       <Name>Jither.PBKDF2</Name>

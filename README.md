@@ -22,6 +22,10 @@ Since `PBKDF2DeriveBytes` subclasses `DeriveBytes` (like `Rfc2898DeriveBytes`) u
         }
     }
 
+__Important note on targets__
+The master/default branch targets .NET Framework 4.5.1 (because that's what I currently use.
+There's also a "net3.5" branch targetting .NET Framework 3.5 Client Profile.
+	
 __Note:__
 
 Although the code in this repository is extracted from production code, it is mainly intended for educational purposes and something to build upon - not as a full-fledged library.

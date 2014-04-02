@@ -30,7 +30,7 @@ namespace Jither.PBKDF2
         {
             if (!disposed)
             {
-                hmac.Dispose();
+                hmac.Clear();
                 hmac = null;
                 disposed = true;
             }

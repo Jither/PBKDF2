@@ -8,8 +8,9 @@ namespace Jither.PBKDF2
     /// allows an arbitrary Pseudo Random Function, meaning we can use e.g. 
     /// HMAC SHA256 or HMAC SHA512 rather than the hardcoded HMAC SHA-1 of the 
     /// built-in version.
+    /// IDisposable is only implemented to make this interface compatible with the .NET 4.5 version.
     /// </summary>
-    public class PBKDF2DeriveBytes : DeriveBytes
+    public class PBKDF2DeriveBytes : DeriveBytes, IDisposable
     {
         // Initialization:
 
@@ -180,6 +181,10 @@ namespace Jither.PBKDF2
             }
 
             return result;
+        }
+
+        public virtual void Dispose()
+        {
         }
     }
 }

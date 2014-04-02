@@ -46,7 +46,7 @@ namespace Jither.PBKDF2
             {
                 ConstructorInfo cstr = type.GetConstructor(new[] { typeof(byte[]) });
                 Debug.Assert(cstr != null, "HMAC-derived type doesn't have a constructor(byte[] input)");
-                var argExpr = Expression.Parameter(typeof(byte[]));
+                var argExpr = Expression.Parameter(typeof(byte[]), "key");
                 var newExpr = Expression.New(cstr, argExpr);
                 var lambda = Expression.Lambda<Func<byte[], HMAC>>(newExpr, argExpr);
                 result = lambda.Compile();
@@ -69,7 +69,7 @@ namespace Jither.PBKDF2
         {
             if (!disposed)
             {
-                hmac.Dispose();
+                hmac.Clear();
                 hmac = null;
                 disposed = true;
             }
